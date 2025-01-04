@@ -13,6 +13,7 @@ This synthetic dataset, "Fraudulent E-Commerce Transactions," is designed to sim
     - Include binary indicator "Is Fraudulent" to identify fraudulent or legitimate transactions (1 for fraudulent, 0 for legitimate).
     - Binary indicator column has been removed from Version 1 for testing.
   - Features: 16
+  - Fraudulent Transactions: Approximately 5%
 
 <br><br>
 **Project Summary**:
