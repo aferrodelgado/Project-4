@@ -32,3 +32,6 @@ Our team had two datasets: one smaller file which contained a binary indicator o
        - Answer: This model is currently skewed in favor of the client. Healthy loans were all found and recorded as healthy, and 99% of the returned positives should have been positive. The f1-score was 100%, meaning this metric is solid. When looking at high-risk loans, however, the f1 score was only 89%. The success rate of the model might be helped by adding a random forest model, but also might be skewed by the large disparity between healty vs high-risk support.
 
     - Random Forest Model - 
+
+<br><br>
+**Visualizations**:
