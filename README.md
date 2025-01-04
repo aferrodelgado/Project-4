@@ -7,5 +7,5 @@ This synthetic dataset, "Fraudulent E-Commerce Transactions," is designed to sim
 
 **Dataset Overview**
 
-  - Number of Transactions in Version 1: 1,472,952 (Used for testing)
+  - Number of Transactions in Version 1: 1,472,952 (Used for testing - can be accessed via above dataset link)
   - Number of Transactions in Version 2: 23,634 (Used for training / making predictions)
