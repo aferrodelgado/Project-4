@@ -2,23 +2,26 @@
 
 **Dataset**: [Fraudulent E-Commerce Transactions](https://www.kaggle.com/datasets/shriyashjagtap/fraudulent-e-commerce-transactions/data?select=Fraudulent_E-Commerce_Transaction_Data_2.csv)
 
-**Description**:
+**Dataset Summary**:
 
-This synthetic dataset, "Fraudulent E-Commerce Transactions," is designed to simulate transaction data from an e-commerce platform with a focus on fraud detection. It contains a variety of features commonly found in transactional data, with additional attributes specifically engineered to support the development and testing of fraud detection algorithms.
+The “Fraudulent E-Commerce Transactions” dataset is a synthetic dataset created to simulate transactional data from an e-commerce platform, with a focus on fraud detection. It includes features commonly found in real-world transactional data and additional attributes specifically engineered to support fraud detection model development.
 
-**Dataset Overview**
+  **Dataset Versions**:
 
-  - Number of Transactions in Version 1: 1,472,952 (Used for testing - can be accessed via above dataset link)
-  - Number of Transactions in Version 2: 23,634 (Used for training / making predictions)
-    - Include binary indicator "Is Fraudulent" to identify fraudulent or legitimate transactions (1 for fraudulent, 0 for legitimate).
-    - Binary indicator column has been removed from Version 1 for testing.
-  - Features: 16
-  - Fraudulent Transactions: Approximately 5%
+  - **Version 1**: Contains 1,472,952 transactions. This larger dataset does not include the binary fraud indicator and is used for testing the model.
+  - **Version 2**: Contains 23,634 transactions and includes a binary “Is Fraudulent” column (1 for fraudulent, 0 for legitimate). This smaller dataset is used for training the model.
+
+  **Key Statistics**:
+
+  - **Fraudulent Transactions**: Approximately 5% of total transactions.
+  - **Features**: 16 features
 
 <br><br>
 **Project Summary**:
 
-Our team had two datasets: one smaller file which contained a binary indicator of fraudulent vs legitimate transactions. Our team used the smaller dataset with these indicators to train a model, which then will be able to predict fraudulence for the records in the larger dataset. The goal for this project is to compare our trained model to that of the original and see if we can achieve an accuracy level of 75% or more.
+Our project involved two datasets of e-commerce transactions. The smaller dataset (Version 2), which included a binary indicator of fraudulence, was used to train a machine learning model. This trained model was then applied to the larger dataset (Version 1) to predict fraudulent transactions.
+
+The primary goal of this project was to achieve a fraud detection model with a prediction accuracy of 75% or higher. Additionally, the model’s performance was compared to the original dataset’s fraud detection accuracy to evaluate its effectiveness.
 
   - **Data Cleaning / Extraction**:
 
