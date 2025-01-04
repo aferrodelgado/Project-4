@@ -23,6 +23,7 @@ Our project involved two datasets of e-commerce transactions. The smaller datase
 
 The primary goal of this project was to achieve a fraud detection model with a prediction accuracy of 75% or higher. Additionally, the model’s performance was compared to the original dataset’s fraud detection accuracy to evaluate its effectiveness.
 
+
   - **Data Cleaning / Extraction**:
 
     - Using Python, matplotlib and Numpy to import and clean CSV files. Using Sql to retrieve our data because it of its ease to use on small data set and better integration with Pandas and metasploit
