@@ -36,7 +36,7 @@ The primary goal of this project was to achieve a fraud detection model with a p
 
  2. **Model Architecture**:
     - Defines a neural network with:
-       - 4 hidden layers of varying sizes (100, 50, 20, 10 units).
+       - 4 hidden layers of varying sizes (40, 30, 20, 10 units).
        - ReLU activation for all layers except the output layer.
        - A sigmoid activation function for binary classification in the output layer.
 
