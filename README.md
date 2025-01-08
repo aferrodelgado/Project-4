@@ -26,32 +26,23 @@ The “Fraudulent E-Commerce Transactions” dataset is a synthetic dataset crea
 <br><br>
 **Project Summary**:
 
-Our project involved two datasets of e-commerce transactions. The smaller dataset (Version 2), which included a binary indicator of fraudulence, was used to train a machine learning model. This trained model was then applied to the larger dataset (Version 1) to predict fraudulent transactions.
+Our project aimed to detect fraudulent e-commerce transactions using machine learning models. The smaller dataset (Version 2), containing a binary fraud indicator, was utilized for training and evaluation. The goal was to achieve a prediction accuracy of 75% or higher, with a focus on improving the recall and precision for detecting fraudulent transactions (Class 1). The trained model was applied to the larger dataset (Version 1) for fraud prediction.
 
-The primary goal of this project was to achieve a fraud detection model with a prediction accuracy of 75% or higher. Additionally, the model’s performance was compared to the original dataset’s fraud detection accuracy to evaluate its effectiveness.
+**Feature Engineering and Preprocessing**:
 
- 1. **Feature Engineering and Preprocessing**:
-    - Drops unnecessary columns (Customer Location) and scales the data using StandardScaler.
-    - Splits data into training and testing sets.
-    - Ensures features (X) and target (y) are correctly defined, and missing or irrelevant data is excluded.
+ 1. **Data Preprocessing**:
+    - Removed irrelevant columns such as Customer Location and Year to reduce noise in the data.
+    - Scaled numerical features using StandardScaler to ensure that all features contributed equally to the model.
 
- 2. **Model Architecture**:
-    - Defines a neural network with:
-      - 4 hidden layers of varying sizes (40, 30, 20, 10 units).
-      - ReLU activation for all layers except the output layer.
-      - A sigmoid activation function for binary classification in the output layer.
+ 2. **Data Splitting**:
+    - Split the dataset into training and testing sets to evaluate model performance on unseen data
 
- 3. **Model Compilation and Training**:
-    - Compiles the model with:
-      - binary_crossentropy loss function (ideal for binary classification problems).
-      - adam optimizer (adaptive learning rate for efficient training).
-      - Accuracy as the evaluation metric.
+ 3. **Class Imbalance Handling**:
+    - Instead of using Random Forest and SMOTE, XGBoost’s scale_pos_weight parameter was utilized to account for the imbalance in fraudulent and non-fraudulent transactions (5% fraud).
 
- 4. **Performance Tracking**:
-    - Plots:
-      - Accuracy over epochs
-        ![Model Accuracy over Epochs](https://github.com/user-attachments/assets/94bdb9d4-0825-4417-864b-dee6e43aac3a)
-        <br><br>
-      - Loss over epochs
-        ![Model Loss over Epochs](https://github.com/user-attachments/assets/8aae9371-1a18-47c5-ba8e-c56ed7594d1a)
+ **Model Architecture: XGBoost**:
+  
+ 1. **Model Parameters**:
+    - 
 
+ 
