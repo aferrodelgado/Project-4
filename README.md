@@ -74,5 +74,6 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
  - The overall accuracy (95%) and weighted F1-Score demonstrate robust performance on the highly imbalanced dataset.
 
 **Performance Comparison**:
- ![performance_comparison](https://github.com/user-attachments/assets/7419e652-ac91-436f-b03f-d9d44ceb4cb9)
+![performance_comparison](https://github.com/user-attachments/assets/dceae340-3265-4b0c-8856-6842e2054a66)
+
 
