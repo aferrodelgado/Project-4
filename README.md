@@ -78,6 +78,7 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
    - While recall was comparable, XGBoost provided a better trade-off between minimizing false positives and detectiving fraudulent transactions. 
 
 **Performance Comparison**:
-![performance_comparison](https://github.com/user-attachments/assets/dceae340-3265-4b0c-8856-6842e2054a66)
+<img width="1671" alt="performance_comparison_cropped" src="https://github.com/user-attachments/assets/eede6ac6-4aea-46b9-b9a5-344f201cf23b" />
+
 
 
