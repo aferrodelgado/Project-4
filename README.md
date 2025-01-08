@@ -12,7 +12,7 @@ The “Fraudulent E-Commerce Transactions” dataset is a synthetic dataset crea
 
   - **Version 1**: Contains 1,472,952 transactions. This larger dataset does not include the binary fraud indicator and is used for testing the model.
     
-     - Fraudulent_E-Commerce_Transaction_Data.csv
+     - Fraudulent_E-Commerce_Transaction_Data.csv (downloadable via the Dataset link above)
     
   - **Version 2**: Contains 23,634 transactions and includes a binary “Is Fraudulent” column (1 for fraudulent, 0 for legitimate). This smaller dataset is used for training the model.
     
