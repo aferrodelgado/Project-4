@@ -38,9 +38,9 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
     - Split the dataset into training and testing sets to evaluate model performance on unseen data
 
  3. **Class Imbalance Handling**:
-    - Instead of using Random Forest and SMOTE, XGBoost’s scale_pos_weight parameter was utilized to account for the imbalance in fraudulent and non-fraudulent transactions (5% fraud).
+    - XGBoost was chosen over Random Forest with SMOTE. XGBoost leveraged scale_pos_weight to handle the imbalance of between fraudulent and non-fraudulent transactions (5% fraud).
 
- **Model Architecture: XGBoost**:
+ **Model: XGBoost**:
   
  1. **Model Parameters**:
     - Number of Trees (n_estimators): 200.
@@ -70,8 +70,12 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
   
  **Analysis**:
  - XGBoost achieved strong precision for detecting fraudulent transactions, minimizing false positives.
- - While recall was slightly lower, the F1-Score for fraudulent transactions indicated a balanced trade-off between precision and recall.
- - The overall accuracy (95%) and weighted F1-Score demonstrate robust performance on the highly imbalanced dataset.
+ - While recall (48%) was not as high as desired, it achieved a good balance with precision, with an F1-Score of .52.
+ - The overall accuracy (95%) and weighted F1-Score demonstrate robust performance despite a highly imbalanced dataset.
+ - Comparison with Random Forest (SMOTE):
+   
+   - XGBoost outperformed Random Forest with SMOTE in precision, F1-Score, and overall accuracy.
+   - While recall was comparable, XGBoost provided a better trade-off between minimizing false positives and detectiving fraudulent transactions. 
 
 **Performance Comparison**:
 ![performance_comparison](https://github.com/user-attachments/assets/dceae340-3265-4b0c-8856-6842e2054a66)
