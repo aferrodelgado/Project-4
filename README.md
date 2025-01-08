@@ -53,6 +53,7 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
     - Early stopping implemented during training to prevent overfitting.
     - Predictions made using a probability threshold of 0.5 for binary classification.
 
+<br><br>
 **Model Evaluation**:
 
  **XGBoost Results**:
