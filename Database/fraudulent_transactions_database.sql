@@ -16,11 +16,11 @@ CREATE TABLE visualization_transaction_df (
 
 
 CREATE TABLE modeling_df (
-	trxn_amt NUMERIC(20, 15),
+	trxn_amt DECIMAL(10, 2),
 	qty INTEGER,
 	cust_age INTEGER,
 	fraudulent INTEGER,
-	acct_age_days NUMERIC(20, 15),
+	acct_age_days INTEGER,
 	trxn_hour INTEGER,
 	year INTEGER,
 	month INTEGER,
