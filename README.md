@@ -30,19 +30,28 @@ Our project involved two datasets of e-commerce transactions. The smaller datase
 
 The primary goal of this project was to achieve a fraud detection model with a prediction accuracy of 75% or higher. Additionally, the model’s performance was compared to the original dataset’s fraud detection accuracy to evaluate its effectiveness.
 
+ 1. **Feature Engineering and Preprocessing**:
+    - Drops unnecessary columns (Customer Location) and scales the data using StandardScaler.
+    - Splits data into training and testing sets.
+    - Ensures features (X) and target (y) are correctly defined, and missing or irrelevant data is excluded.
 
-  - **Data Cleaning / Extraction**:
+ 2. **Model Architecture**:
+    - Defines a neural network with:
+      - 4 hidden layers of varying sizes (40, 30, 20, 10 units).
+      - ReLU activation for all layers except the output layer.
+      - A sigmoid activation function for binary classification in the output layer.
 
-    - Using Python, matplotlib and Numpy to import and clean CSV files. Using Sql to retrieve our data because it of its ease to use on small data set and better integration with Pandas and metasploit
+ 3. **Model Compilation and Training**:
+    - Compiles the model with:
+      - binary_crossentropy loss function (ideal for binary classification problems).
+      - adam optimizer (adaptive learning rate for efficient training).
+      - Accuracy as the evaluation metric.
 
-  - **Model Selection**:
+ 4. **Performance Tracking**:
+    - Plots:
+      - Accuracy over epochs
+        ![Model Accuracy over Epochs](https://github.com/user-attachments/assets/94bdb9d4-0825-4417-864b-dee6e43aac3a)
+        <br><br>
+      - Loss over epochs
+        ![Model Loss over Epochs](https://github.com/user-attachments/assets/8aae9371-1a18-47c5-ba8e-c56ed7594d1a)
 
-    - Logistic Regression Model - for original data testing
-
-       - Question: How well does the logistic regression model predict both the `0` (healthy loan) and `1` (high-risk loan) labels?
-       - Answer: This model is currently skewed in favor of the client. Healthy loans were all found and recorded as healthy, and 99% of the returned positives should have been positive. The f1-score was 100%, meaning this metric is solid. When looking at high-risk loans, however, the f1 score was only 89%. The success rate of the model might be helped by adding a random forest model, but also might be skewed by the large disparity between healty vs high-risk support.
-
-    - Random Forest Model - 
-
-<br><br>
-**Visualizations**:
