@@ -2,6 +2,8 @@
 
 **Dataset**: [Fraudulent E-Commerce Transactions](https://www.kaggle.com/datasets/shriyashjagtap/fraudulent-e-commerce-transactions/data?select=Fraudulent_E-Commerce_Transaction_Data_2.csv)
 
+<img width="800" alt="Screenshot 2025-01-07 at 6 57 08 PM" src="https://github.com/user-attachments/assets/2d8d92db-8e6c-4c9d-a1ec-3fa11f05d7e7" />
+
 **Dataset Summary**:
 
 The “Fraudulent E-Commerce Transactions” dataset is a synthetic dataset created to simulate transactional data from an e-commerce platform, with a focus on fraud detection. It includes features commonly found in real-world transactional data and additional attributes specifically engineered to support fraud detection model development.
@@ -9,7 +11,10 @@ The “Fraudulent E-Commerce Transactions” dataset is a synthetic dataset crea
   **Dataset Versions**:
 
   - **Version 1**: Contains 1,472,952 transactions. This larger dataset does not include the binary fraud indicator and is used for testing the model.
+    - Fraudulent_E-Commerce_Transaction_Data.csv (downloadable via the dataset link above)
+      
   - **Version 2**: Contains 23,634 transactions and includes a binary “Is Fraudulent” column (1 for fraudulent, 0 for legitimate). This smaller dataset is used for training the model.
+    - Fraudulent_E-Commerce_Transaction_Data_2.csv
 
   **Key Statistics**:
 
@@ -24,18 +29,34 @@ Our project involved two datasets of e-commerce transactions. The smaller datase
 The primary goal of this project was to achieve a fraud detection model with a prediction accuracy of 75% or higher. Additionally, the model’s performance was compared to the original dataset’s fraud detection accuracy to evaluate its effectiveness.
 
 
-  - **Data Cleaning / Extraction**:
+ 1. **Feature Engineering and Preprocessing**:
+    - Drops unnecessary columns (Customer Location) and scales the data using StandardScaler.
+    - Splits data into training and testing sets.
+    - Ensures features (X) and target (y) are correctly defined, and missing or irrelevant data is excluded.
 
-    - Using Python, matplotlib and Numpy to import and clean CSV files. Using Sql to retrieve our data because it of its ease to use on small data set and better integration with Pandas and metasploit
+ 2. **Model Architecture**:
+    - Defines a neural network with:
+       - 4 hidden layers of varying sizes (100, 50, 20, 10 units).
+       - ReLU activation for all layers except the output layer.
+       - A sigmoid activation function for binary classification in the output layer.
 
-  - **Model Selection**:
+    - Summarizes the model structure.
 
-    - Logistic Regression Model - for original data testing
+ 3. **Model Compilation and Training**:
+    - Compiles the model with:
+      - binary_crossentropy loss function (ideal for binary classification problems).
+      - adam optimizer (adaptive learning rate for efficient training).
+      - Accuracy as the evaluation metric.
+    - Trains the model for 10 epochs with a batch size of 32 and tracks accuracy and loss for each epoch using a custom callback.
 
-       - Question: How well does the logistic regression model predict both the `0` (healthy loan) and `1` (high-risk loan) labels?
-       - Answer: This model is currently skewed in favor of the client. Healthy loans were all found and recorded as healthy, and 99% of the returned positives should have been positive. The f1-score was 100%, meaning this metric is solid. When looking at high-risk loans, however, the f1 score was only 89%. The success rate of the model might be helped by adding a random forest model, but also might be skewed by the large disparity between healty vs high-risk support.
+ 4. **Performance Tracking**:
+    - Captures training accuracy and loss per epoch using a Callback class.
+    - Evaluates the model on test data and calculates loss and accuracy.
 
-    - Random Forest Model - 
-
-<br><br>
-**Visualizations**:
+ 5. **Results Visualization**:
+    - Plots:
+       - Accuracy over epochs.
+       - Loss over epochs.
+     
+  6. **Model Evaluation**:
+     - Outputs final test accuracy (97.16%) and loss (0.1123), demonstrating the model performs well on unseen data.
