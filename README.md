@@ -43,6 +43,14 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
  **Model Architecture: XGBoost**:
   
  1. **Model Parameters**:
-    - 
+    - Number of Trees (n_estimators): 200.
+    - Tree Depth (max_depth): 5.
+    - Class Weight Scaline (scale_pos_weight): 10 to emphasize minority class predictions.
+    - Objective: Binary classification (binary: logistic).
+    - Evaluation Metric: Logarithmic Loss (logloss).
+
+ 2. **Training and Evaluation**:
+    - Early stopping implemented during training to prevent overfitting.
+    - Predictions made using a probability threshold of 0.5 for binary classification.
 
  
