@@ -53,4 +53,22 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
     - Early stopping implemented during training to prevent overfitting.
     - Predictions made using a probability threshold of 0.5 for binary classification.
 
- 
+**Model Evaluation**:
+
+ **XGBoost Results**:
+ - **Confusion Matrix**:
+   - [[4394   89]
+   - [ 126   118]]
+  
+ - **Key Metrics**:
+   - Precision (Class 1): 0.57
+   - Recall (Class 1): 0.48
+   - F1-Score (Class 1): 0.52
+   - Overall Accuracy: 0.95
+   - Macro Average F1-Score: 0.75
+   - Weighted Average F1-Score: 0.95
+  
+ **Analysis**:
+ - XGBoost achieved strong precision for detecting fraudulent transactions, minimizing false positives.
+ - While recall was slightly lower, the F1-Score for fraudulent transactions indicated a balanced trade-off between precision and recall.
+ - The overall accuracy (95%) and weighted F1-Score demonstrate robust performance on the highly imbalanced dataset.
