@@ -2,7 +2,7 @@
 
 **Dataset**: [Fraudulent E-Commerce Transactions](https://www.kaggle.com/datasets/shriyashjagtap/fraudulent-e-commerce-transactions/data?select=Fraudulent_E-Commerce_Transaction_Data_2.csv)
 
-<img width="800" alt="Screenshot 2025-01-07 at 6 57 08 PM" src="https://github.com/user-attachments/assets/2d8d92db-8e6c-4c9d-a1ec-3fa11f05d7e7" />
+<img width="900" alt="Screenshot 2025-01-07 at 6 57 08 PM" src="https://github.com/user-attachments/assets/2d8d92db-8e6c-4c9d-a1ec-3fa11f05d7e7" />
 
 **Dataset Summary**:
 
@@ -56,7 +56,11 @@ The primary goal of this project was to achieve a fraud detection model with a p
  5. **Results Visualization**:
     - Plots:
        - Accuracy over epochs.
+         ![image](https://github.com/user-attachments/assets/2820cdbb-a895-4e03-abc9-76fdc5e599dc)
+         <br><br>
        - Loss over epochs.
+         ![image (1)](https://github.com/user-attachments/assets/c063ebb6-7886-4455-bea8-adce88216dc9)
+
      
-  6. **Model Evaluation**:
+  7. **Model Evaluation**:
      - Outputs final test accuracy (97.16%) and loss (0.1123), demonstrating the model performs well on unseen data.
