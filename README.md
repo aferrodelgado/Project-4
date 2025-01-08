@@ -72,3 +72,7 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
  - XGBoost achieved strong precision for detecting fraudulent transactions, minimizing false positives.
  - While recall was slightly lower, the F1-Score for fraudulent transactions indicated a balanced trade-off between precision and recall.
  - The overall accuracy (95%) and weighted F1-Score demonstrate robust performance on the highly imbalanced dataset.
+
+**Performance Comparison**:
+ ![performance_comparison](https://github.com/user-attachments/assets/7419e652-ac91-436f-b03f-d9d44ceb4cb9)
+
