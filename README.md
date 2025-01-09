@@ -83,5 +83,23 @@ Our project aimed to detect fraudulent e-commerce transactions using machine lea
 
 <img width="1671" alt="performance_comparison_cropped" src="https://github.com/user-attachments/assets/eede6ac6-4aea-46b9-b9a5-344f201cf23b" />
 
+<br><br>
+**XGBoost Model Precision versus Recall**
+![precision_recall_curve_xgboost](https://github.com/user-attachments/assets/19e7a181-64f8-4096-b34d-bbea80524558)
+
+
+1. **High Precision at Low Recall**:
+On the left side of the curve, the precision is close to 1.0 when recall is very low. This indicates that when the model predicts very few transactions as fraudulent, it is mostly correct (fewer false positives). However, it is missing a lot of actual fraudulent transactions.
+
+2. **Trade-Off**:
+As recall increases, the precision decreases. This is because, to catch more fraudulent transactions, the model starts predicting more transactions as fraudulent, which increases false positives.
+
+3. **Model Performance**:
+The area under the curve gives a sense of how well the model performs. If the curve stays high (closer to 1.0), it indicates that the model maintains a good balance between precision and recall. A steep drop-off in precision as recall increases may indicate a trade-off between identifying true positives and avoiding false positives.
+
+4. **Application-Specific Decision**:
+Depending on the use case, you might prioritize precision (minimizing false alarms in fraud detection, where false positives are costly) or recall (ensuring all fraudulent transactions are flagged).
+
+
 
 
