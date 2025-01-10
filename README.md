@@ -108,6 +108,7 @@ Depending on the use case, you might prioritize precision (minimizing false alar
 
 <br><br>
 **Conclusion**:
+
 The **XGBoost model** was decided to be the most effective solution for detecting fraudulent e-commerce transactions based on accuracy and speed. While the original goal of achieving 75% overall prediction accuracy was reconsidered due to the imbalanced dataset, the new focus on **recall** ensured the detection of a significant proportion of fraudulent transactions.
 
 The final model provided a **recall of 75%**, which means 3 out of 4 fraudulent transactions were correctly identified. This result demonstrates the model’s effectiveness in high-stakes scenarios where missing fraudulent cases is costlier than flagging legitimate ones. The decision threshold can be adjusted to optimize the balance between precision and recall, allowing for quick adaptability to business needs, while maintaining speed and scalability for large-scale datasets.
