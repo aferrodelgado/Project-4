@@ -51,15 +51,15 @@ To meet these goals, we tested three machine learning models, focusing on buildi
 **Model Analysis**
 
 We tested multiple models to identify the best-performing approach for fraud detection. Here’s a summary of the key models and their results:
-_Models can be found in the Models folder.
 
- **Logistic Regression**
+
+ **Logistic Regression** (_Accuracy model.ipynb_ located in Models folder)
 
  - Performance: High overall accuracy (95%) but struggled with fraudulent transactions (Class 1).
 
  - Limitations: Precision of 11% for Class 1 indicates too many false positives, making it unsuitable for real-world applications.
 
- **XGBoost** (
+ **XGBoost** (_Accuracy model XGBoost.ipynb_ located in Models folder)
 
  - Gradient Boosting: Built a sequence of decision trees where each tree learns from the errors of the previous one.
 
