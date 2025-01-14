@@ -12,11 +12,11 @@ The “Fraudulent E-Commerce Transactions” dataset is a synthetic dataset crea
 
   - **Version 1**: Contains **1,472,952 transactions**. This larger dataset does not include the binary fraud indicator and is used for testing the model.
     
-     - Fraudulent_E-Commerce_Transaction_Data.csv (downloadable via the Dataset link above)
+     - _Fraudulent_E-Commerce_Transaction_Data.csv_ (downloadable via the Dataset link above)
     
   - **Version 2**: Contains **23,634 transactions** and includes a binary “Is Fraudulent” column (1 for fraudulent, 0 for legitimate). This smaller dataset is used for training the model.
     
-     - Training_Fraudulent_E-Commerce_Transaction_Data_2.csv (Models Folder)
+     - _Training_Fraudulent_E-Commerce_Transaction_Data_2.csv_ (Models Folder)
 
   **Key Statistics**:
 
@@ -51,6 +51,7 @@ To meet these goals, we tested three machine learning models, focusing on buildi
 **Model Analysis**
 
 We tested multiple models to identify the best-performing approach for fraud detection. Here’s a summary of the key models and their results:
+_Models can be found in the Models folder.
 
  **Logistic Regression**
 
@@ -58,7 +59,7 @@ We tested multiple models to identify the best-performing approach for fraud det
 
  - Limitations: Precision of 11% for Class 1 indicates too many false positives, making it unsuitable for real-world applications.
 
- **XGBoost**
+ **XGBoost** (
 
  - Gradient Boosting: Built a sequence of decision trees where each tree learns from the errors of the previous one.
 
@@ -68,7 +69,8 @@ We tested multiple models to identify the best-performing approach for fraud det
 
  - Weaknesses: Precision and recall still required improvement for real-world application.
 
- **Random Forest with SMOTE**
+ **Random Forest with SMOTE** 
+ (_Accuracy model Random Forest and SMOTE_OPTIMIZED.ipynb_ with connection SQLite Database and _Accuracy model Random Forest and SMOTE_OPTIMIZED_1.4Mil.ipynb_ located in Models folder)
 
  - SMOTE: Balanced the dataset by generating synthetic samples for the minority fraud class, ensuring the model saw enough fraudulent examples during training.
 
