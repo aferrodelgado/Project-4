@@ -93,6 +93,7 @@ We tested multiple models to identify the best-performing approach for fraud det
   - [Python SQLite – Connecting to Database](https://www.geeksforgeeks.org/python-sqlite-connecting-to-database/)
   - [Learn XGBoost in Python Tutorial](https://www.datacamp.com/tutorial/xgboost-in-python)
   - [SMOTE with Random Forest in Python - Google AI Overview](https://www.google.com/search?q=random+forest+with+smote+in+python&oq=random+forest+with+smote+in+python&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigATIHCAYQIRifBTIHCAcQIRifBTIHCAgQIRifBTIHCAkQIRifBdIBCTQzODlqMWoxNagCCLACAQ&sourceid=chrome&ie=UTF-8)
+  - [How to use SMOTE for an imbalanced dataset](https://www.turing.com/kb/smote-for-an-imbalanced-dataset)
 
 Utilized Xpert Learning Assistant via Bootcamp Spot and Chat GPT for assistance in coding and resolving errors
 
