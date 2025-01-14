@@ -92,6 +92,7 @@ We tested multiple models to identify the best-performing approach for fraud det
   - [Machine Learning for Fraud Detection: Using Random Forests and Synthetic Minority Over-sampling (SMOTE) in Credit Card Transactions](https://medium.com/@kisetzuu/machine-learning-for-fraud-detection-using-random-forests-and-synthetic-minority-over-sampling-629cf7e74671)
   - [Python SQLite – Connecting to Database](https://www.geeksforgeeks.org/python-sqlite-connecting-to-database/)
   - [Learn XGBoost in Python Tutorial](https://www.datacamp.com/tutorial/xgboost-in-python)
+  - [SMOTE with Random Forest in Python - Google AI Overview](https://www.google.com/search?q=random+forest+with+smote+in+python&oq=random+forest+with+smote+in+python&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigATIHCAUQIRigATIHCAYQIRifBTIHCAcQIRifBTIHCAgQIRifBTIHCAkQIRifBdIBCTQzODlqMWoxNagCCLACAQ&sourceid=chrome&ie=UTF-8)
 
 Utilized Xpert Learning Assistant via Bootcamp Spot and Chat GPT for assistance in coding and resolving errors
 
