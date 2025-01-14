@@ -49,6 +49,7 @@ To meet these goals, we tested three machine learning models, focusing on buildi
 
 <br><br>
 **Model Analysis**
+
 We tested multiple models to identify the best-performing approach for fraud detection. Here’s a summary of the key models and their results:
 
  **Logistic Regression**
@@ -85,6 +86,14 @@ We tested multiple models to identify the best-performing approach for fraud det
   3. **Best Model**: Random Forest with SMOTE outperformed others, achieving comparable precision, recall, and F1-scores for both classes.
   4. **Scalability**: Models demonstrated strong performance on both smaller and larger datasets (23k and 1.4M+ transactions).
   5. **Real-World Applicability**: Established a solid foundation for fraud detection strategies while highlighting areas for continued improvement.
+
+**Additional References**
+
+  - [Machine Learning for Fraud Detection: Using Random Forests and Synthetic Minority Over-sampling (SMOTE) in Credit Card Transactions](https://medium.com/@kisetzuu/machine-learning-for-fraud-detection-using-random-forests-and-synthetic-minority-over-sampling-629cf7e74671)
+  - [Python SQLite – Connecting to Database](https://www.geeksforgeeks.org/python-sqlite-connecting-to-database/)
+  - [Learn XGBoost in Python Tutorial](https://www.datacamp.com/tutorial/xgboost-in-python)
+
+Utilized Xpert Learning Assistant via Bootcamp Spot and Chat GPT for assistance in coding and resolving errors
 
 
 
