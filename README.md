@@ -33,6 +33,7 @@ Our objective was twofold:
 2. Address the class imbalance in the dataset, where only 5% of transactions were fraudulent. This imbalance made it challenging to detect fraud effectively without favoring legitimate transactions.
 
 To meet these goals, we tested three machine learning models, focusing on building a scalable solution that balanced accuracy and fairness across both classes, even with imbalanced data.
+
 <br><br>
 **Feature Engineering and Preprocessing**:
 
@@ -45,6 +46,7 @@ To meet these goals, we tested three machine learning models, focusing on buildi
 
  3. **Class Imbalance Handling**:
     - Random Forest with SMOTE effectively addressed class imbalance by generating synthetic data for the minority class. Ultimately, the Random Forest with SMOTE model stood out, achieving comparable performance for both classes and surpassing our initial accuracy goals.
+
 <br><br>
 **Model Analysis**
 We tested multiple models to identify the best-performing approach for fraud detection. Here’s a summary of the key models and their results:
@@ -75,6 +77,7 @@ We tested multiple models to identify the best-performing approach for fraud det
 
  - Conclusion: Selected as the best-performing model for this project.
 
+<br><br>
 **Conclusion**:
 
   1. **Objective Achieved**: Surpassed the 75% accuracy goal for both legitimate and fraudulent transactions.
