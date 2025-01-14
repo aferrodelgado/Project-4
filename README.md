@@ -26,10 +26,14 @@ The “Fraudulent E-Commerce Transactions” dataset is a synthetic dataset crea
 <br><br>
 **Project Summary**:
 
-This project aimed to detect fraudulent e-commerce transactions using machine learning models. The smaller dataset (Version 2), containing a binary fraud indicator, was utilized for training and evaluation. Initially, the goal was to achieve an overall prediction accuracy of 75% or higher. However, recognizing the impact of dataset imbalance (5% fraudulent transactions), the focus shifted to achieving a recall of 75% or higher for identifying fraudulent transactions (Class 1).
+Our project focused on Detecting Fraudulent E-Commerce Transactions using machine learning. Fraud detection is a critical issue in today’s digital marketplace, and we set out to create a model that could identify fraudulent transactions accurately and efficiently.
 
-The trained model was then applied to the larger dataset (Version 1) to predict fraudulent transactions.
+Our objective was twofold:
+1. Develop a fraud detection model capable of achieving 75% or higher accuracy for both fraudulent and legitimate transactions.
+2. Address the class imbalance in the dataset, where only 5% of transactions were fraudulent. This imbalance made it challenging to detect fraud effectively without favoring legitimate transactions.
 
+To meet these goals, we tested three machine learning models, focusing on building a scalable solution that balanced accuracy and fairness across both classes, even with imbalanced data.
+<br><br>
 **Feature Engineering and Preprocessing**:
 
  1. **Data Preprocessing**:
@@ -40,78 +44,47 @@ The trained model was then applied to the larger dataset (Version 1) to predict 
     - Split the dataset into training and testing sets to evaluate model performance on unseen data
 
  3. **Class Imbalance Handling**:
-    - XGBoost was chosen over Random Forest with SMOTE. XGBoost leveraged scale_pos_weight to handle the imbalance of between fraudulent and non-fraudulent transactions (5% fraud).
-
- **Model: XGBoost**:
-  
- 1. **Model Parameters**:
-    - Number of Trees (n_estimators): 200.
-    - Tree Depth (max_depth): 5.
-    - Class Weight Scaline (scale_pos_weight): 15 to emphasize minority class predictions.
-    - Objective: Binary classification (binary: logistic).
-    - Evaluation Metric: Logarithmic Loss (logloss).
-
- 2. **Training and Evaluation**:
-    - Early stopping implemented during training to prevent overfitting.
-    - Predictions made using a probability threshold of 0.3 for binary classification.
-
+    - Random Forest with SMOTE effectively addressed class imbalance by generating synthetic data for the minority class. Ultimately, the Random Forest with SMOTE model stood out, achieving comparable performance for both classes and surpassing our initial accuracy goals.
 <br><br>
-**Model Evaluation and Analysis**:
+**Model Analysis**
+We tested multiple models to identify the best-performing approach for fraud detection. Here’s a summary of the key models and their results:
 
- **XGBoost Results**:
- - **Confusion Matrix**:
-   - [[239939 39884]
-   - [   3643 11125]]
-  
- - **Key Metrics**:
-   - Precision (Class 1): 0.22
-   - Recall (Class 1): 0.75
-   - F1-Score (Class 1): 0.34
-   - Overall Accuracy: 0.85
-   - Macro Average F1-Score: 0.63
-   - Weighted Average F1-Score: 0.89
+ **Logistic Regression**
 
- 
-  - **Recall Priority**: The XGBoost model achieved **75% recall** for fraudulent transactions (Class 1), successfully identifying a majority of fraudulent cases in the test set.
-    
-  - **Precision Trade-Off**: Precision for fraudulent transactions (22%) was lower due to the trade-off required to achieve higher recall. This means the model flagged more transactions as fraudulent, leading to some false positives.
+ - Performance: High overall accuracy (95%) but struggled with fraudulent transactions (Class 1).
 
-  - **Balanced Performance**: While precision was sacrificed, the F1-Score (0.34) for Class 1 reflects a reasonable trade-off for use cases where identifying fraudulent transactions is critical.
+ - Limitations: Precision of 11% for Class 1 indicates too many false positives, making it unsuitable for real-world applications.
 
-  - **Overall Accuracy and Weighted F1-Score**: Despite focusing on recall, the model maintained a strong overall accuracy (85%) and a high weighted F1-Score (0.89).
+ **XGBoost**
 
-  - **Scalability and Speed**: XGBoost demonstrated its strength in efficiently handling large datasets, processing over 1.4 million records with optimized performance.
+ - Gradient Boosting: Built a sequence of decision trees where each tree learns from the errors of the previous one.
 
-<br><br>
-**Performance Comparison**:
-  - Analyzing Fraudulent_E-Commerce_Transaction_Data_2.csv to select model to run for the larger dataset.
+ - Performance: Achieved a balanced trade-off with 96% overall accuracy and Class 1 precision of 69%.
 
-This evaluation highlights the model’s suitability for scenarios where identifying as many fraudulent transactions as possible is the top priority, even at the cost of increased false positives.
-![performance_comparison](https://github.com/user-attachments/assets/884f92c4-4128-4ef0-88f9-0d58bf33cc4c)
+ - Strengths: Scalability for larger datasets and better handling of imbalanced data compared to logistic regression.
 
+ - Weaknesses: Precision and recall still required improvement for real-world application.
 
-**XGBoost Model Precision versus Recall**
-![precision_recall_curve_xgboost](https://github.com/user-attachments/assets/19e7a181-64f8-4096-b34d-bbea80524558)
+ **Random Forest with SMOTE**
 
+ - SMOTE: Balanced the dataset by generating synthetic samples for the minority fraud class, ensuring the model saw enough fraudulent examples during training.
 
-1. **High Precision at Low Recall**:
-On the left side of the curve, the precision is close to 1.0 when recall is very low. This indicates that when the model predicts very few transactions as fraudulent, it is mostly correct (fewer false positives). However, it is missing a lot of actual fraudulent transactions.
+ - Performance: Achieved 97% overall accuracy and comparable precision and recall for both legitimate and fraudulent transactions.
 
-2. **Trade-Off**:
-As recall increases, the precision decreases. This is because, to catch more fraudulent transactions, the model starts predicting more transactions as fraudulent, which increases false positives.
+ - Strengths: Provided the most balanced performance across all metrics and worked well on both smaller (23k) and larger (1.4M+) datasets.
 
-3. **Model Performance**:
-The area under the curve gives a sense of how well the model performs. If the curve stays high (closer to 1.0), it indicates that the model maintains a good balance between precision and recall. A steep drop-off in precision as recall increases may indicate a trade-off between identifying true positives and avoiding false positives.
+ - Conclusion: Selected as the best-performing model for this project.
 
-4. **Application-Specific Decision**:
-Depending on the use case, you might prioritize precision (minimizing false alarms in fraud detection, where false positives are costly) or recall (ensuring all fraudulent transactions are flagged).
-
-<br><br>
 **Conclusion**:
 
-The **XGBoost model** was decided to be the most effective solution for detecting fraudulent e-commerce transactions based on accuracy and speed. While the original goal of achieving 75% overall prediction accuracy was reconsidered due to the imbalanced dataset, the new focus on **recall** ensured the detection of a significant proportion of fraudulent transactions.
+  1. **Objective Achieved**: Surpassed the 75% accuracy goal for both legitimate and fraudulent transactions.
+  2. **Class Imbalance Addressed**: SMOTE effectively balanced the minority fraud class for improved model training.
+  3. **Best Model**: Random Forest with SMOTE outperformed others, achieving comparable precision, recall, and F1-scores for both classes.
+  4. **Scalability**: Models demonstrated strong performance on both smaller and larger datasets (23k and 1.4M+ transactions).
+  5. **Real-World Applicability**: Established a solid foundation for fraud detection strategies while highlighting areas for continued improvement.
 
-The final model provided a **recall of 75%**, which means 3 out of 4 fraudulent transactions were correctly identified. This result demonstrates the model’s effectiveness in high-stakes scenarios where missing fraudulent cases is costlier than flagging legitimate ones. The decision threshold can be adjusted to optimize the balance between precision and recall, allowing for quick adaptability to business needs, while maintaining speed and scalability for large-scale datasets.
+
+
 
 
 
