@@ -70,7 +70,7 @@ We tested multiple models to identify the best-performing approach for fraud det
  - Weaknesses: Precision and recall still required improvement for real-world application.
 
  **Random Forest with SMOTE** 
- (_Accuracy model Random Forest and SMOTE_OPTIMIZED.ipynb_ with connection SQLite Database and _Accuracy model Random Forest and SMOTE_OPTIMIZED_1.4Mil.ipynb_ located in Models folder)
+ (_Accuracy model Random Forest and SMOTE_OPTIMIZED.ipynb_ with connection to SQLite Database and _Accuracy model Random Forest and SMOTE_OPTIMIZED_1.4Mil.ipynb_ located in Models folder)
 
  - SMOTE: Balanced the dataset by generating synthetic samples for the minority fraud class, ensuring the model saw enough fraudulent examples during training.
 
